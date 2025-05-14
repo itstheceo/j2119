@@ -27,6 +27,7 @@ module J2119
 
     def self.classes_to_re classes
       re_classes = classes.map  {|x| "\\p{#{x}}" }
+      re_classes << '\-'
       "[#{re_classes.join('')}]"
     end
 

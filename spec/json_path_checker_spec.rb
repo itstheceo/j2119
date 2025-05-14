@@ -46,6 +46,7 @@ describe J2119::JSONPathChecker do
     expect(J2119::JSONPathChecker.is_path?("$['foo']['bar']")).to be_truthy
     expect(J2119::JSONPathChecker.is_path?("$['foo']['bar']['baz']['biff']..blecch")).to be_truthy
     expect(J2119::JSONPathChecker.is_path?("$['café_au_lait']")).to be_truthy
+    expect(J2119::JSONPathChecker.is_path?("$['detail-type']")).to be_truthy
   end
 
   it 'should accept some Jayway JsonPath examples' do
